@@ -11,8 +11,6 @@
   <img alt="Letmeask Room" src=".github/print2.png" />
 </p>
 
-<br>
-
 <h2 align="center">Site published <a href="https://letmeask-3b93b.firebaseapp.com/">here</a></h2>
 
 ## 🧪 Technologies
