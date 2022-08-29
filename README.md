@@ -1,6 +1,6 @@
 <img alt="Project image cover" src=".github/letmeask.svg" width="100%" />
 
-<h2>Site published <a href="https://letmeask-3b93b.firebaseapp.com/">here</a></h2>
+<h2>Site published <a href="https://letmeaskgreen.vercel.app/">here</a></h2>
 
 ## Technologies
 
