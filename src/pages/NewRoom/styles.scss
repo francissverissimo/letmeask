@@ -1,0 +1,135 @@
+#new-room {
+  display: flex;
+  min-height: 100vh;
+
+  aside {
+    display: flex;
+    flex: 6;
+    background-color: #835afd;
+    color: #fff;
+    
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-inline: 1rem;
+      max-width: 26rem;
+      margin-inline: auto;
+
+      strong {
+        font: 700 1.75rem "Poppins", sans-serif;
+      }
+
+      img {
+        max-width: 15rem;
+        align-self: center;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-top: 1rem;
+        font-weight: 500;
+        color: #f8f8f8;
+      }
+    }
+  }
+
+  main {
+    flex: 8;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 22.5rem;
+      align-items: stretch;
+      text-align: center;
+
+      > img {
+        align-self: center;
+      }
+
+      .user-info {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 4rem;
+          border-radius: 2rem;
+        }
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+      h2 {
+        margin-block: 1rem;
+        font-family: "Poppins", sans-serif;
+      }
+
+      form {
+        input {
+          display: flex;
+          height: 3rem;
+          border: 0.0625rem solid #a8a8b3;
+          border-radius: 0.3rem;
+          width: 100%;
+          padding-inline: 1rem;
+          background: #fff;
+        }
+
+        button {
+          margin-top: 1rem;
+          width: 100%;
+        }
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: #737380;
+        margin-top: 1rem;
+
+        a {
+          color: #e559f9;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #new-room {
+    flex-direction: column-reverse;
+    height: auto;
+
+    aside div {
+      margin-block: 1rem;
+      max-width: 22.5rem;
+
+      img {
+        width: 12rem;
+        align-self: center;
+      }
+
+      strong {
+        font-size: 1.3rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .main-content {
+      padding-block: 1rem;
+    }
+  }
+}

@@ -1,12 +1,12 @@
 import { FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { database } from "../services/firebase";
-import { useAuth } from "../hooks/useAuth";
-import { Button } from "../components/Button";
-import illustrationImg from "../assets/images/illustration.svg";
-import logoImg from "../assets/images/logo.svg";
-import googleIconImg from "../assets/images/google-icon.svg";
-import "../styles/auth.scss";
+import { database } from "../../services/firebase";
+import { useAuth } from "../../hooks/useAuth";
+import { Button } from "../../components/Button";
+import illustrationImg from "../../assets/images/illustration.svg";
+import logoImg from "../../assets/images/logo.svg";
+import googleIconImg from "../../assets/images/google-icon.svg";
+import "./styles.scss";
 
 export function Home() {
   const navigate = useNavigate();
@@ -41,7 +41,7 @@ export function Home() {
   }
 
   return (
-    <div id="page-auth">
+    <div id="home">
       <aside>
         <div>
           <img

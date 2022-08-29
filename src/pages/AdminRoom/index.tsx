@@ -1,15 +1,14 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { database } from "../services/firebase";
-import { useRoom } from "../hooks/useRoom";
-import { Button } from "../components/Button";
-import { RoomCode } from "../components/RoomCode";
-import { Question } from "../components/Question";
-import logoImg from "../assets/images/logo.svg";
-import deleteImg from "../assets/images/delete.svg";
-import checkImg from "../assets/images/check.svg";
-import answerImg from "../assets/images/answer.svg";
-import "../styles/room.scss";
-import "../styles/question.scss";
+import { database } from "../../services/firebase";
+import { useRoom } from "../../hooks/useRoom";
+import { Button } from "../../components/Button";
+import { RoomCode } from "../../components/RoomCode";
+import { Question } from "../../components/Question";
+import logoImg from "../../assets/images/logo.svg";
+import deleteImg from "../../assets/images/delete.svg";
+import checkImg from "../../assets/images/check.svg";
+import answerImg from "../../assets/images/answer.svg";
+import "./styles.scss";
 
 type RoomParams = {
   id: string;
@@ -49,7 +48,7 @@ export function AdminRoom() {
   }
 
   return (
-    <div id="page-room">
+    <div id="admin-room">
       <header>
         <div className="content">
           <img src={logoImg} alt="Letmeask" />

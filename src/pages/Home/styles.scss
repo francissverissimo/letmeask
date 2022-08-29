@@ -1,34 +1,34 @@
-#page-auth {
+#home {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 
   aside {
-    background: #835afd;
+    display: flex;
     flex: 6;
+    background-color: #835afd;
     color: #fff;
     
     div {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
-      align-self: center;
       padding-inline: 1rem;
-      max-width: 35rem;
+      max-width: 26rem;
       margin-inline: auto;
-      margin-top: 3rem;
 
       strong {
-        font: 700 2rem "Poppins", sans-serif;
+        font: 700 1.75rem "Poppins", sans-serif;
       }
 
       img {
         max-width: 15rem;
+        align-self: center;
       }
 
       p {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-top: 1rem;
+        font-weight: 500;
         color: #f8f8f8;
       }
     }
@@ -79,7 +79,7 @@
         align-items: center;
         font-size: 0.9rem;
         color: #a8a8b3;
-        margin-block: 2rem;
+        margin-block: 1rem;
 
         &::before {
           content: "";
@@ -104,7 +104,7 @@
 
       h2 {
         font-size: 1.5rem;
-        margin: 4rem 0 0.3rem;
+        margin-block: 1rem;
         font-family: "Poppins", sans-serif;
       }
 
@@ -140,10 +140,9 @@
 }
 
 @media (max-width: 768px) {
-  #page-auth {
+  #home {
     flex-direction: column-reverse;
-    height: auto;
-
+    
     aside div {
       margin-block: 1rem;
       max-width: 22.5rem;

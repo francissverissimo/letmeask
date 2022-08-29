@@ -1,21 +1,20 @@
 import { FormEvent, useState } from "react";
 import { useParams } from "react-router-dom";
-import { database } from "../services/firebase";
-import { useAuth } from "../hooks/useAuth";
-import { useRoom } from "../hooks/useRoom";
-import { Button } from "../components/Button";
-import { RoomCode } from "../components/RoomCode";
-import { Question } from "../components/Question";
-import logoImg from "../assets/images/logo.svg";
-import "../styles/room.scss";
-import "../styles/question.scss";
+import { database } from "../../services/firebase";
+import { useAuth } from "../../hooks/useAuth";
+import { useRoom } from "../../hooks/useRoom";
+import { Button } from "../../components/Button";
+import { RoomCode } from "../../components/RoomCode";
+import { Question } from "../../components/Question";
+import logoImg from "../../assets/images/logo.svg";
+import "./styles.scss";
 
 type RoomParams = {
   id: string;
 };
 
 export function Room() {
-  const { user } = useAuth();
+  const { user, signInWithGoogle } = useAuth();
   const params = useParams<RoomParams>();
   const [newQuestion, setNewQuestion] = useState("");
 
@@ -63,7 +62,7 @@ export function Room() {
   }
 
   return (
-    <div id="page-room">
+    <div id="room">
       <header>
         <div className="content">
           <img src={logoImg} alt="Letmeask" />
@@ -96,7 +95,8 @@ export function Room() {
               </div>
             ) : (
               <span>
-                Para enviar uma pergunta, <button>faça seu login</button>
+                Para enviar uma pergunta,{" "}
+                <button onClick={signInWithGoogle}>faça seu login</button>
               </span>
             )}
             <Button type="submit" disabled={!user}>

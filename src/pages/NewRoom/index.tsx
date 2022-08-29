@@ -1,11 +1,11 @@
 import { FormEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { database } from "../services/firebase";
-import { useAuth } from "../hooks/useAuth";
-import { Button } from "../components/Button";
-import illustrationImg from "../assets/images/illustration.svg";
-import logoImg from "../assets/images/logo.svg";
-import "../styles/auth.scss";
+import { database } from "../../services/firebase";
+import { useAuth } from "../../hooks/useAuth";
+import { Button } from "../../components/Button";
+import illustrationImg from "../../assets/images/illustration.svg";
+import logoImg from "../../assets/images/logo.svg";
+import "./styles.scss";
 
 export function NewRoom() {
   const navigate = useNavigate();
@@ -28,15 +28,31 @@ export function NewRoom() {
   }
 
   return (
-    <div id="page-auth">
+    <div id="new-room">
       <aside>
-        <img src={illustrationImg} alt="Ilustração simbolizando a respostas" />
-        <strong>Crie salas de Q&amp;A ao-vivo</strong>
-        <p>Tire as dúvidas da sua audiência em tempo real</p>
+        <div>
+          <img
+            src={illustrationImg}
+            alt="Ilustração simbolizando a respostas"
+          />
+          <strong>Crie salas de Q&amp;A ao-vivo</strong>
+          <p>Tire as dúvidas da sua audiência em tempo real</p>
+        </div>
       </aside>
+
       <main>
         <div className="main-content">
           <img src={logoImg} alt="letmeask" />
+          {user && (
+            <div className="user-info">
+              <img
+                src={user.avatar}
+                alt={user.name}
+                referrerPolicy="no-referrer"
+              />
+              <span>{user.name}</span>
+            </div>
+          )}
           <h2>Criar uma nova sala</h2>
           <form onSubmit={handleCreateRoom}>
             <input
