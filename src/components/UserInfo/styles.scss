@@ -1,0 +1,15 @@
+.user-info {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 2rem;
+    border-radius: 1rem;
+  }
+
+  span {
+    font-weight: 500;
+  }
+}
