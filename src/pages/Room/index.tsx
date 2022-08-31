@@ -6,6 +6,7 @@ import { useRoom } from "../../hooks/useRoom";
 import { Button } from "../../components/Button";
 import { RoomCode } from "../../components/RoomCode";
 import { Question } from "../../components/Question";
+import { UserInfo } from "../../components/UserInfo";
 import logoImg from "../../assets/images/logo.svg";
 import "./styles.scss";
 
@@ -66,7 +67,9 @@ export function Room() {
       <header>
         <div className="content">
           <img src={logoImg} alt="Letmeask" />
-          <RoomCode code={roomId} />
+          <div>
+            <RoomCode code={roomId} />
+          </div>
         </div>
       </header>
 
@@ -89,10 +92,7 @@ export function Room() {
 
           <div className="form-footer">
             {user ? (
-              <div className="user-info">
-                <img src={user.avatar} alt={user.name} />
-                <span>{user.name}</span>
-              </div>
+              <UserInfo name={user.name} avatar={user.avatar} />
             ) : (
               <span>
                 Para enviar uma pergunta,{" "}

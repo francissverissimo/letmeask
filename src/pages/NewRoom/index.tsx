@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { database } from "../../services/firebase";
 import { useAuth } from "../../hooks/useAuth";
 import { Button } from "../../components/Button";
+import { UserInfo } from "../../components/UserInfo";
 import illustrationImg from "../../assets/images/illustration.svg";
 import logoImg from "../../assets/images/logo.svg";
 import "./styles.scss";
@@ -35,25 +36,21 @@ export function NewRoom() {
             src={illustrationImg}
             alt="Ilustração simbolizando a respostas"
           />
+
           <strong>Crie salas de Q&amp;A ao-vivo</strong>
+
           <p>Tire as dúvidas da sua audiência em tempo real</p>
         </div>
       </aside>
 
       <main>
         <div className="main-content">
+          {user && <UserInfo name={user.name} avatar={user.avatar} />}
+
           <img src={logoImg} alt="letmeask" />
-          {user && (
-            <div className="user-info">
-              <img
-                src={user.avatar}
-                alt={user.name}
-                referrerPolicy="no-referrer"
-              />
-              <span>{user.name}</span>
-            </div>
-          )}
+
           <h2>Criar uma nova sala</h2>
+
           <form onSubmit={handleCreateRoom}>
             <input
               type="text"
@@ -63,6 +60,7 @@ export function NewRoom() {
             />
             <Button type="submit">Criar sala</Button>
           </form>
+
           <p>
             Quer entrar em uma sala existente <Link to="/">clique aqui</Link>
           </p>
