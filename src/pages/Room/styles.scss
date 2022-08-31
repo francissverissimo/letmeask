@@ -1,54 +1,50 @@
 #room {
   header {
-    padding: 24px;
     border-bottom: 1px solid #e2e2e2;
-
+    
     .content {
-      max-width: 1120px;
-      margin: 0 auto;
+      padding: 1rem;
+      max-width: 50rem;
+      margin-inline: auto;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      column-gap: 1rem;
 
       > img {
-        max-height: 45px;
+        max-height: 3rem;
       }
 
       > div {
         display: flex;
-        gap: 16px;
-
-        button {
-          height: 40px;
-        }
+        gap: 1rem;
       }
-
     }
   }
 
   main {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 50rem;
+    margin-inline: auto;
+    padding: 1rem;
 
     .room-title {
-      margin: 32px 0 24px;
+      margin-bottom: 1rem;
       display: flex;
       align-items: center;
 
       h1 {
         font-family: "Poppins", sans-serif;
-        font-size: 24px;
+        font-size: 1.5rem;
         color: #29292e;
       }
 
       span {
-        margin-left: 16px;
+        margin-left: 1rem;
         background: #e559f9;
-        border-radius: 9999px;
-        padding: 8px 16px;
+        border-radius: 0.3rem;
+        padding: 0.3rem;
         color: #fff;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 0.9rem;
       }
     }
 
@@ -56,40 +52,23 @@
       textarea {
         width: 100%;
         border: 0;
-        padding: 16px;
-        border-radius: 8px;
+        padding: 1rem;
+        border-radius: 0.3rem;
         background: #fefefe;
-        box-shadow: 0 2px 2px rbga(0, 0, 0, 0.4);
+        box-shadow: 0 0.3rem 0.5rem #ddd;
         resize: vertical;
-        min-height: 130px;
+        min-height: 8rem;
+        max-height: 16rem;
       }
 
       .form-footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 16px;
-
-        .user-info {
-          display: flex;
-          align-items: center;
-
-          img {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-          }
-
-          span {
-            margin-left: 8px;
-            color: #29292e;
-            font-weight: 500;
-            font-size: 14px;
-          }
-        }
+        margin-block: 1rem;
 
         > span {
-          font-size: 14px;
+          font-size: 0.9rem;
           color: #737380;
           font-weight: 500;
 
@@ -98,16 +77,25 @@
             border: none;
             color: #835afd;
             text-decoration: underline;
-            font-weight: 500;
-            font-size: 14;
+            font-weight: bold;
+            font-size: 1rem;
             cursor: pointer;
+
+            &:hover {
+              transform: scale(102%);
+            }
           }
         }
       }
     }
+  }
+}
 
-    .question-list {
-      margin-top: 32px;
+@media (max-width: 640px) {
+  #room header .content {
+    > img {
+      height: 2.5rem;
+      align-self: flex-start;
     }
   }
 }
