@@ -1,7 +1,9 @@
 #room {
+  padding-bottom: 5rem;
+
   header {
     border-bottom: 1px solid #e2e2e2;
-    
+
     .content {
       padding: 1rem;
       max-width: 50rem;
@@ -85,6 +87,10 @@
               transform: scale(102%);
             }
           }
+        }
+
+        .button {
+          font-size: 0.8rem;
         }
       }
     }
