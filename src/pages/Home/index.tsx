@@ -1,5 +1,5 @@
 import { FormEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { database } from "../../services/firebase";
 import { useAuth } from "../../hooks/useAuth";
 import { Button } from "../../components/Button";
@@ -17,6 +17,7 @@ export function Home() {
     if (!user) {
       await signInWithGoogle();
     }
+    
     navigate("/rooms/new");
   }
 
@@ -55,7 +56,10 @@ export function Home() {
 
       <main>
         <div className="main-content">
-          <img src={logoImg} alt="letmeask" />
+          <Link to="/">
+            <img src={logoImg} alt="letmeask" />
+          </Link>
+
           <button onClick={handleCreateRoom} className="create-room">
             <img src={googleIconImg} alt="Logo do Google" />
             Crie sua sala com o Google
@@ -68,7 +72,7 @@ export function Home() {
               type="text"
               onChange={(event) => setRoomCode(event.target.value)}
               value={roomCode}
-              placeholder="Digite o código da sala"
+              placeholder="Código da sala"
             />
 
             <Button type="submit">Entrar na sala</Button>
