@@ -1,4 +1,4 @@
-<img alt="Project image cover" src=".github/letmeask.svg" width="100%" />
+<img alt="Project image cover" src=".github/Letmeask.png" width="100%" />
 
 <h2>Site published <a href="https://letmeaskgreen.vercel.app/">here</a></h2>
 
